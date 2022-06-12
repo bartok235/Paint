@@ -1,0 +1,28 @@
+﻿<Window x:Class="Zadanie1_Lista2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie1_Lista2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="539.172" Width="800">
+    <StackPanel x:Name="stackPanel" Margin="5">
+        <Canvas x:Name="canvas" Margin="20,15,15,50" Height="191" MouseLeftButtonDown="canvas_MouseLeftButtonDown" Background="#FFE2E2E2"/>
+        <WrapPanel Height="33" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <RadioButton x:Name="radioRadialny" Content="Gradient Radialny" Height="24" Width="147" HorizontalAlignment="Center" Checked="radioRadialny_Checked" Margin="5,0,0,0"/>
+            <RadioButton x:Name="radioLiniowy" Content="Gradient Liniowy" Height="24" Width="147" IsChecked="True" RenderTransformOrigin="0.655,0.55" Margin="0" HorizontalAlignment="Center" Checked="radioLiniowy_Checked"/>
+        </WrapPanel>
+        <WrapPanel Height="27" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="244,0,283,0" Width="255">
+            <Label Content="Przeżroczystosć" Width="119" Margin="5,0,0,0"/>
+            <TextBox x:Name="opacityTxt" Height="19" TextWrapping="Wrap" Text="1" Margin="30,0,0,0" Width="51" RenderTransformOrigin="0.314,0.7" TextChanged="TextBox_TextChanged"/>
+        </WrapPanel>
+        <Label Content="Dla gradiantu Radialnego :" Margin="244,0,332,0"/>
+        <WrapPanel Name="wrapRadius" Height="53" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="244,0,283,0" Width="255">
+            <Label Content="Radius X" Width="119" Margin="5,0,0,0"/>
+            <TextBox Name="radiusX" Height="19" TextWrapping="Wrap" Text="0,5" Margin="30,0,0,0" Width="51" RenderTransformOrigin="0.314,0.7" TextChanged="radiusX_TextChanged"/>
+            <Label Content="Radius Y" Width="119" Margin="5,0,0,0"/>
+            <TextBox x:Name="radiusY" Height="19" TextWrapping="Wrap" Text="0,5" Margin="30,0,0,0" Width="51" RenderTransformOrigin="0.314,0.7" TextChanged="RadiusY_TextChanged"/>
+        </WrapPanel>
+
+    </StackPanel>
+</Window>
